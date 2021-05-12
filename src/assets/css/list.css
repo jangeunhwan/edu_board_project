@@ -1,0 +1,138 @@
+.boardList {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+
+
+}
+.bl__titleArea {
+    position: relative;
+}
+
+.bl__titleArea h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color:darkcyan;
+    z-index: 10;
+}
+
+.bl__columnArea {
+    margin-top: 40px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bl__columnArea.bl__columnArea__list {
+    display: flex;
+    flex-direction: row;
+
+    width: 1250px;
+    height: 30px;
+    background-color: fuchsia;
+    color: aliceblue;
+}
+
+@keyframes titleBoxAni {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.bl__titleArea div {
+    position: absolute;
+    right: -80px;
+    top: 7px;
+    width: 140px;
+    height: 25px;
+    border: 6px solid burlywood;
+    opacity: 0.4;
+    z-index: -1;
+    animation: titleBoxAni 2.5s infinite;
+}
+
+.bl__columnArea .bl__columnArea__list {
+    height: 100%;
+
+    background-color: cadetblue;
+    color: azure;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bl__columnArea .bl__columnArea__list li {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bl__columnArea .bl__columnArea__list li:nth-child(1) {
+    width: 60px;
+}
+
+.bl__columnArea .bl__columnArea__list li:nth-child(2) {
+    width: 890px;
+}
+
+.bl__columnArea .bl__columnArea__list li:nth-child(3),
+.bl__columnArea .bl__columnArea__list li:nth-child(4),
+.bl__columnArea .bl__columnArea__list li:nth-child(5) {
+    width: 100px;
+}
+
+.bl__columnArea__list.moblie {
+    width: 320px;
+    height: 25px;
+}
+
+.bl__columnArea__list.moblie li {
+    font-size: 10px;
+}
+
+.bl__columnArea__list.moblie li:nth-child(1) {
+    width: 260px;
+}
+
+.bl__columnArea__list.moblie li:nth-child(2),
+.bl__columnArea__list.moblie li:nth-child(3) {
+    width: 60px;
+}
+
+@media (max-width : 500px) {
+    .pc {
+        display: none;
+    }
+    .moblie {
+        display: flex;
+    }
+}
+@media (min-width : 500px) {
+    .moblie {
+        display: none;
+    }
+    .pc {
+        display: flex;
+    }
+}
