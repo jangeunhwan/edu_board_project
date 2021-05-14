@@ -17,6 +17,15 @@ block content
                 li 제목mo
                 li 작성자mo
                 li 작성일mo
-                
+        each row in boardList
+            a(href=`/board/detail?pk=${row.no}`)
+                div.bl__dataArea.pc
+                    ul.bl__dataArea__list.pc 
+                        li #{row.no}
+                        li #{row.title}
+                        li #{row.author}
+                        li #{row.created}
+                        li #{row.hit}
+                    
 
 
